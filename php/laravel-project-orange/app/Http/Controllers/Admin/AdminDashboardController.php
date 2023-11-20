@@ -35,13 +35,13 @@ class AdminDashboardController extends Controller {
         $admin = Admin::all()->where('email', $request->email)->first();
 
         if ($admin) {
-        //     if (Hash::check($request->password, $admin->password)) {
+            if (Hash::check($request->password, $admin->password)) {
                 Session::regenerate();
                 Session::put('admin', $admin);
                 return redirect('admin');
-        //     } else {
-        //         return back()->with('fail_status', __('admin.login.fail_status.0'))->withInput($request->except('password'));
-        //     }
+            } else {
+                return back()->with('fail_status', __('admin.login.fail_status.0'))->withInput($request->except('password'));
+            }
         } else {
             return back()->with('fail_status', __('admin.login.fail_status.1'))->withInput($request->except('password'));
         }

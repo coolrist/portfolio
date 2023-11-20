@@ -21,8 +21,7 @@
 
                 @php
                     $website_commission = number_format($order->cost * 0.1, 2, thousands_separator: '');
-                    $developer_commission = number_format($website_commission * 0.2, 2, thousands_separator: '');
-                    $seller_amount = number_format($order->cost - ($website_commission + $developer_commission), 2, thousands_separator: '');
+                    $seller_amount = number_format($order->cost - $website_commission, 2, thousands_separator: '');
                 @endphp
                 <!-- Set up a container element for the button -->
                 <div id="paypal-button-container"></div>
@@ -37,9 +36,8 @@
 
 @section('js')
     <!-- Include the PayPal JavaScript SDK; replace "test" with your own sandbox Business account app client ID -->
-    <script
-        src="https://www.paypal.com/sdk/js?&client-id=AQkJ6FxHhNmZ1u53iiohK26p2NQF8Azp7rSzVqh90lMcqjwPR_AE6ZMga0NuuyYT_nEbFV8qK8hHjCH2&currency=USD&merchant-id=*"
-        data-merchant-id="RYGPP64E5EZ5A,J8KT9N3W95326,2Y26BURFY9TN4"></script>
+    <script src="https://www.paypal.com/sdk/js?&client-id=CLIENTID&currency=USD&merchant-id=*" data-merchant-id="ID1,ID2">
+    </script>
 
     <script>
         paypal.Buttons({
@@ -54,14 +52,6 @@
                         }
                     }, {
                         reference_id: "REFID-1",
-                        payee: {
-                            email_address: "developper_s25630856@business.example.com",
-                        },
-                        amount: {
-                            value: "{{ $developer_commission }}", // currency_code: "USD",
-                        }
-                    }, {
-                        reference_id: "REFID-2",
                         payee: {
                             email_address: "shoppingcart_25629322@business.example.com",
                         },

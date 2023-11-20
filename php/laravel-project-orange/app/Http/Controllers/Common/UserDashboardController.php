@@ -51,13 +51,13 @@ class UserDashboardController extends Controller {
         $user = User::where('email', $request->email)->first();
 
         if ($user) {
-            // if (Hash::check($request->password, $user->password)) {
+            if (Hash::check($request->password, $user->password)) {
                 Session::regenerate();
                 Session::put('user', $user);
                 return redirect()->route('user')->with('success_status', __('userdash.account.success_status.1'));
-            // } else {
-            //     return back()->with('fail_status', __('common.login.fail_status.0'))->withInput($request->except('password'));
-            // }
+            } else {
+                return back()->with('fail_status', __('common.login.fail_status.0'))->withInput($request->except('password'));
+            }
         } else {
             return back()->with('fail_status', __('common.login.fail_status.1'))->withInput($request->except('password'));
         }
