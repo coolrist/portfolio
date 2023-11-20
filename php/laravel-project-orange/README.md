@@ -1,3 +1,5 @@
+<img src="./public/assets/public/img/logo.svg" height="200px" width="200px"/>
+
 # Orange E-commerce
 
 ## Technical Information
