@@ -1,0 +1,26 @@
+.form {
+
+    @include font(16px);
+
+    .form__text-field {
+        @include bg-text-fill(map-get($bg-night-color, text-field), $color-black);
+        -fx-border: none;
+    }
+
+    .form__btn {
+        @include bg-text-fill(map-get($bg-night-color, btn-normal));
+
+        &:hover {
+            @include bg-text-fill(lighten(map-get($bg-night-color, btn-normal), 7.5));
+        }
+
+        &--danger {
+            @include bg-text-fill(map-get($bg-night-color, btn-danger));
+
+            &:hover {
+                @include bg-text-fill(lighten(map-get($bg-night-color, btn-danger), 7.5));
+            }
+
+        }
+    }
+}

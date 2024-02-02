@@ -1,0 +1,32 @@
+.nav {
+    @include bg-text-fill(map-get($bg-night-color, secondary));
+
+    .nav__app-name {
+        @include font(1.75em, bolder);
+        -fx-fill: $color-white;
+    }
+
+    .nav__btn {
+        @include bg-text-fill(transparent);
+
+		&:hover {
+			@include nav-border(lighten(map-get($bg-night-color, btn-normal), 7.5));
+		}
+
+        &:focused {
+            @include nav-border(map-get($bg-night-color, btn-normal));
+        }
+       
+       	&--horizontal {       		
+       		@include bg-text-fill(transparent);
+        	
+        	&:hover {
+				@include nav-border(lighten(map-get($bg-night-color, btn-normal), 7.5), false);
+			}
+	
+	        &:focused {
+	            @include nav-border(map-get($bg-night-color, btn-normal), false);
+	        }
+        }
+    }
+}

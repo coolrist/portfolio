@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+
+<TreeTableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="800" prefHeight="400.0" prefWidth="800.0" stylesheets="@../assets/hotel_view.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hostel.ui.controller.HostelDisplayListView">
+  <columns>
+    <TreeTableColumn fx:id="col1" editable="false" minWidth="200.0" prefWidth="200.0" text="Room" />
+    <TreeTableColumn fx:id="col2" editable="false" minWidth="200.0" prefWidth="200.0" text="Name" />
+      <TreeTableColumn fx:id="col3" editable="false" minWidth="200.0" prefWidth="200.0" text="Month" />
+      <TreeTableColumn fx:id="col4" editable="false" minWidth="200.0" prefWidth="200.0" text="Amount" />
+  </columns>
+</TreeTableView>

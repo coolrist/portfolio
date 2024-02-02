@@ -1,0 +1,84 @@
+* {
+  -fx-background-color: transparent;
+  -fx-text-fill: #f1f0f3;
+  -fx-font-size: 14px;
+  -fx-font-weight: normal;
+}
+
+.root {
+  -fx-background-color: #4c5052;
+  -fx-text-fill: #f1f0f3;
+}
+
+.menu-item:hover {
+  -fx-text-fill: #e3e3e3;
+  -fx-background-color: #949096;
+}
+
+.nav {
+  -fx-background-color: #202324;
+  -fx-text-fill: #f1f0f3;
+}
+.nav .nav__app-name {
+  -fx-font-size: 1.75em;
+  -fx-font-weight: bolder;
+  -fx-fill: #f1f0f3;
+}
+.nav .nav__btn {
+  -fx-background-color: transparent;
+  -fx-text-fill: #f1f0f3;
+}
+.nav .nav__btn:hover {
+  -fx-border-color: #15b6c1;
+  -fx-border-width: 0 0 0 4px;
+  -fx-padding-left: -5px;
+  -fx-border-insets: 15px 0;
+}
+.nav .nav__btn:focused {
+  -fx-border-color: #11959e;
+  -fx-border-width: 0 0 0 4px;
+  -fx-padding-left: -5px;
+  -fx-border-insets: 15px 0;
+}
+.nav .nav__btn--horizontal {
+  -fx-background-color: transparent;
+  -fx-text-fill: #f1f0f3;
+}
+.nav .nav__btn--horizontal:hover {
+  -fx-border-color: #15b6c1;
+  -fx-border-insets: 0 15px;
+  -fx-border-width: 0 0 4px 0;
+  -fx-padding-bottom: -5px;
+}
+.nav .nav__btn--horizontal:focused {
+  -fx-border-color: #11959e;
+  -fx-border-insets: 0 15px;
+  -fx-border-width: 0 0 4px 0;
+  -fx-padding-bottom: -5px;
+}
+
+.form {
+  -fx-font-size: 16px;
+  -fx-font-weight: normal;
+}
+.form .form__text-field {
+  -fx-background-color: #c4d7ddcd;
+  -fx-text-fill: #111013;
+  -fx-border: none;
+}
+.form .form__btn {
+  -fx-background-color: #11959e;
+  -fx-text-fill: #f1f0f3;
+}
+.form .form__btn:hover {
+  -fx-background-color: #15b6c1;
+  -fx-text-fill: #f1f0f3;
+}
+.form .form__btn--danger {
+  -fx-background-color: #ac2727;
+  -fx-text-fill: #f1f0f3;
+}
+.form .form__btn--danger:hover {
+  -fx-background-color: #cb2e2e;
+  -fx-text-fill: #f1f0f3;
+}

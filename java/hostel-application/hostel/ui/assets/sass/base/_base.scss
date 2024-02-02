@@ -1,0 +1,14 @@
+* {
+    @include bg-text-fill(transparent);
+    @include font;
+}
+
+.root {
+    @include bg-text-fill;
+}
+
+
+.menu-item:hover {
+	-fx-text-fill: #e3e3e3;
+	-fx-background-color: #949096;
+}

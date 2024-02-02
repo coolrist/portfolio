@@ -1,0 +1,23 @@
+@mixin font ($size: 14px, $weight: normal) {
+	-fx-font-size: $size;
+	-fx-font-weight: $weight;
+}
+
+@mixin bg-text-fill($bg : map-get($bg-night-color, primary), $text-color : $color-white) {
+	-fx-background-color: $bg;
+    -fx-text-fill: $text-color;
+}
+
+@mixin nav-border($bg, $isVertical: true) {
+    -fx-border-color: $bg;
+    
+    @if $isVertical {
+    	-fx-border-width: 0 0 0 4px;
+   		-fx-padding-left: -5px;
+    	-fx-border-insets: 15px 0;
+    } @else {
+    	-fx-border-insets: 0 15px;
+    	-fx-border-width: 0 0 4px 0;
+   		-fx-padding-bottom: -5px;
+   }
+}
